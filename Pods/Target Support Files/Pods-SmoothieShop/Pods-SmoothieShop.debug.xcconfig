@@ -1,0 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/WePay" "$(PODS_ROOT)/WePay" "$(PODS_ROOT)/WePay" "$(PODS_ROOT)/WePay" "$(PODS_ROOT)/WePay"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/WePay" "${PODS_ROOT}/Headers/Public/WePay/G4XSwiper" "${PODS_ROOT}/Headers/Public/WePay/RPx/MPOSCommunicationManager" "${PODS_ROOT}/Headers/Public/WePay/RUA" "${PODS_ROOT}/Headers/Public/WePay/TrustDefenderMobile" "${PODS_ROOT}/Headers/Public/WePay/WePay"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/WePay" -isystem "${PODS_ROOT}/Headers/Public/WePay/G4XSwiper" -isystem "${PODS_ROOT}/Headers/Public/WePay/RPx/MPOSCommunicationManager" -isystem "${PODS_ROOT}/Headers/Public/WePay/RUA" -isystem "${PODS_ROOT}/Headers/Public/WePay/TrustDefenderMobile" -isystem "${PODS_ROOT}/Headers/Public/WePay/WePay"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"stdc++.6.0.9" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreBluetooth" -framework "CoreTelephony" -framework "G4XSwiper" -framework "MediaPlayer" -framework "RPx" -framework "RUA" -framework "SystemConfiguration" -framework "TrustDefenderMobile" -framework "WePay"
+PODS_ROOT = ${SRCROOT}/Pods

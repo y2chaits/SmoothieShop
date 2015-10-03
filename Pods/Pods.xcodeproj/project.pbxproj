@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		144B1D1C83D657B83E0B86E09A29BBEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135B99E7CCA2C1669A4AA8C91BCDDF05 /* Foundation.framework */; };
+		694B08859AF288691FCC16F8A63DA7A3 /* Pods-SmoothieShop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AD1587D3DBF224DACFB51AB2C3A410 /* Pods-SmoothieShop-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		048A0F54EFA6814924764A8A2208F3F1 /* WePay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WePay.framework; sourceTree = "<group>"; };
+		087452F4151439EDAD21A30BF6DF4A54 /* RPx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RPx.framework; sourceTree = "<group>"; };
+		135B99E7CCA2C1669A4AA8C91BCDDF05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7894CA860F2131583D2CB64928865BBD /* Pods-SmoothieShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmoothieShop.debug.xcconfig"; sourceTree = "<group>"; };
+		7ABB5F6EDC0455C1685B52A956E0546F /* RUA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RUA.framework; sourceTree = "<group>"; };
+		84C6F4BBB564122492741509682C2309 /* Pods-SmoothieShop-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmoothieShop-acknowledgements.plist"; sourceTree = "<group>"; };
+		98D66393E6FCD619F35FBDC7960307B6 /* TrustDefenderMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefenderMobile.framework; sourceTree = "<group>"; };
+		A61CD2B911E1AF73DC3E3E442D50DB46 /* Pods-SmoothieShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmoothieShop.release.xcconfig"; sourceTree = "<group>"; };
+		B15EAEDCCD3B0DB221C4C6D67F889A78 /* libPods-SmoothieShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmoothieShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7AD1587D3DBF224DACFB51AB2C3A410 /* Pods-SmoothieShop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmoothieShop-dummy.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E0A78B3961C644807E26ACA56C40DB39 /* G4XSwiper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = G4XSwiper.framework; sourceTree = "<group>"; };
+		EA43190EE0385222C4EEC9BC9DB227C7 /* Pods-SmoothieShop-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmoothieShop-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD86A99FB02EBC80CF0F77A1D3661D97 /* Pods-SmoothieShop-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmoothieShop-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD7EC83CAC202B856EBAB938C570922A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				144B1D1C83D657B83E0B86E09A29BBEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E40413498FD0208F4456CB6404D71A6 /* WePay */ = {
+			isa = PBXGroup;
+			children = (
+				3FA00342D1D3CCC938587D0D8B9B075B /* Frameworks */,
+			);
+			path = WePay;
+			sourceTree = "<group>";
+		};
+		3FA00342D1D3CCC938587D0D8B9B075B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0A78B3961C644807E26ACA56C40DB39 /* G4XSwiper.framework */,
+				087452F4151439EDAD21A30BF6DF4A54 /* RPx.framework */,
+				7ABB5F6EDC0455C1685B52A956E0546F /* RUA.framework */,
+				98D66393E6FCD619F35FBDC7960307B6 /* TrustDefenderMobile.framework */,
+				048A0F54EFA6814924764A8A2208F3F1 /* WePay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4329E5F002FAEA2F79C7E3CD9FB5008F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E40413498FD0208F4456CB6404D71A6 /* WePay */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44F6E7C61AA6A05A4FAB21371765027B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				79486B70D57D6376A4B9DA9759E4DCC7 /* Pods-SmoothieShop */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				135B99E7CCA2C1669A4AA8C91BCDDF05 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		79486B70D57D6376A4B9DA9759E4DCC7 /* Pods-SmoothieShop */ = {
+			isa = PBXGroup;
+			children = (
+				EA43190EE0385222C4EEC9BC9DB227C7 /* Pods-SmoothieShop-acknowledgements.markdown */,
+				84C6F4BBB564122492741509682C2309 /* Pods-SmoothieShop-acknowledgements.plist */,
+				B7AD1587D3DBF224DACFB51AB2C3A410 /* Pods-SmoothieShop-dummy.m */,
+				FD86A99FB02EBC80CF0F77A1D3661D97 /* Pods-SmoothieShop-resources.sh */,
+				7894CA860F2131583D2CB64928865BBD /* Pods-SmoothieShop.debug.xcconfig */,
+				A61CD2B911E1AF73DC3E3E442D50DB46 /* Pods-SmoothieShop.release.xcconfig */,
+			);
+			name = "Pods-SmoothieShop";
+			path = "Target Support Files/Pods-SmoothieShop";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4329E5F002FAEA2F79C7E3CD9FB5008F /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				44F6E7C61AA6A05A4FAB21371765027B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B15EAEDCCD3B0DB221C4C6D67F889A78 /* libPods-SmoothieShop.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBBF5E68EF54CE7E928BC19989B053A5 /* Pods-SmoothieShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68D87125788546F16F8B61E914C418FC /* Build configuration list for PBXNativeTarget "Pods-SmoothieShop" */;
+			buildPhases = (
+				A6C5257D7EEDAF710C90F6F2D852B34D /* Sources */,
+				BD7EC83CAC202B856EBAB938C570922A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SmoothieShop";
+			productName = "Pods-SmoothieShop";
+			productReference = B15EAEDCCD3B0DB221C4C6D67F889A78 /* libPods-SmoothieShop.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBBF5E68EF54CE7E928BC19989B053A5 /* Pods-SmoothieShop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6C5257D7EEDAF710C90F6F2D852B34D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				694B08859AF288691FCC16F8A63DA7A3 /* Pods-SmoothieShop-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4BC86CA387A6BCFFB99782F4D8B116D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7894CA860F2131583D2CB64928865BBD /* Pods-SmoothieShop.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E58C45228EF724788081C9FBDDB36820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A61CD2B911E1AF73DC3E3E442D50DB46 /* Pods-SmoothieShop.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68D87125788546F16F8B61E914C418FC /* Build configuration list for PBXNativeTarget "Pods-SmoothieShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BC86CA387A6BCFFB99782F4D8B116D6 /* Debug */,
+				E58C45228EF724788081C9FBDDB36820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
