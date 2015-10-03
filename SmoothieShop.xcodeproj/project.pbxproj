@@ -335,7 +335,9 @@
 			baseConfigurationReference = 1287D7E97412533FB0953ABD /* Pods-SmoothieShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SmoothieShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugslabs.SmoothieShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,7 +349,9 @@
 			baseConfigurationReference = 288FC391F80B74F3F4A84FF9 /* Pods-SmoothieShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SmoothieShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugslabs.SmoothieShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
