@@ -278,6 +278,10 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
                                     @"type":@"goods",
                                     @"amount":@(self.amount),
                                     @"currency":@"USD",
+                                    @"fee": @{
+                                                @"app_fee": @0,
+                                                @"fee_payer": @"payee"
+                                            },
                                     @"payment_method": @{
                                             @"type":@"credit_card",
                                             @"credit_card": @{
