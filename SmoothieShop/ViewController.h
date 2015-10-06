@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WePay/WePay.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <WPCardReaderDelegate, WPTokenizationDelegate>
 
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;

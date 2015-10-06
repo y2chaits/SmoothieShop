@@ -15,6 +15,7 @@
 		D7062E521BC0717600D9D024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7062E511BC0717600D9D024 /* Assets.xcassets */; };
 		D7062E551BC0717600D9D024 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7062E531BC0717600D9D024 /* LaunchScreen.storyboard */; };
 		D7062E5E1BC0756600D9D024 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D7062E5D1BC0756600D9D024 /* logo.png */; settings = {ASSET_TAGS = (); }; };
+		D73C939A1BC0A2F30076DDB8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D73C93991BC0A2F30076DDB8 /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D7062E541BC0717600D9D024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7062E561BC0717600D9D024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7062E5D1BC0756600D9D024 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D73C93991BC0A2F30076DDB8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		D7062E451BC0717600D9D024 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D73C93991BC0A2F30076DDB8 /* Settings.bundle */,
 				D7062E461BC0717600D9D024 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -175,6 +178,7 @@
 			files = (
 				D7062E5E1BC0756600D9D024 /* logo.png in Resources */,
 				D7062E551BC0717600D9D024 /* LaunchScreen.storyboard in Resources */,
+				D73C939A1BC0A2F30076DDB8 /* Settings.bundle in Resources */,
 				D7062E521BC0717600D9D024 /* Assets.xcassets in Resources */,
 				D7062E501BC0717600D9D024 /* Main.storyboard in Resources */,
 			);
@@ -337,7 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SmoothieShop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugslabs.SmoothieShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,7 +355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SmoothieShop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugslabs.SmoothieShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
