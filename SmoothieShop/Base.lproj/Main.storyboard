@@ -46,7 +46,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-lS-5y2">
-                                        <rect key="frame" x="179.5" y="107" width="202" height="57"/>
+                                        <rect key="frame" x="179" y="107" width="202" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="bKp-tp-nrG"/>
                                         </constraints>
@@ -56,6 +56,21 @@
                                             <action selector="buyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAP-2y-wDQ"/>
                                         </connections>
                                     </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-bV-Tno">
+                                        <rect key="frame" x="140.5" y="71" width="280" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="zzM-wb-EOT"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="$5"/>
+                                            <segment title="$10"/>
+                                            <segment title="$15"/>
+                                            <segment title="$20"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlIndexChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="ON2-bI-BQK"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -70,6 +85,8 @@
                                     <constraint firstItem="w1x-lS-5y2" firstAttribute="centerX" secondItem="MYt-BZ-I5w" secondAttribute="centerX" id="Ldd-Ln-Yb8"/>
                                     <constraint firstItem="wEI-xn-UXm" firstAttribute="top" secondItem="MYt-BZ-I5w" secondAttribute="top" constant="8" id="Mxm-zW-MKa"/>
                                     <constraint firstItem="wEI-xn-UXm" firstAttribute="leading" secondItem="MYt-BZ-I5w" secondAttribute="leading" constant="8" id="NLm-x5-8yU"/>
+                                    <constraint firstItem="w1x-lS-5y2" firstAttribute="top" secondItem="0ju-bV-Tno" secondAttribute="bottom" constant="8" id="Skf-7c-rV9"/>
+                                    <constraint firstItem="0ju-bV-Tno" firstAttribute="centerX" secondItem="w1x-lS-5y2" secondAttribute="centerX" id="cb7-Ay-fap"/>
                                     <constraint firstItem="w1x-lS-5y2" firstAttribute="top" secondItem="wEI-xn-UXm" secondAttribute="bottom" constant="8" id="dRM-Z3-9p3"/>
                                     <constraint firstItem="wEI-xn-UXm" firstAttribute="top" secondItem="MYt-BZ-I5w" secondAttribute="top" constant="8" id="dac-64-yyg"/>
                                     <constraint firstItem="wEI-xn-UXm" firstAttribute="leading" secondItem="MYt-BZ-I5w" secondAttribute="leading" constant="8" id="hqw-e0-dQm"/>
@@ -115,6 +132,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="amountSelector" destination="0ju-bV-Tno" id="wW4-cL-UCP"/>
                         <outlet property="buyButton" destination="w1x-lS-5y2" id="T1T-HZ-Cw5"/>
                         <outlet property="containerView" destination="MYt-BZ-I5w" id="Pl0-oa-0oU"/>
                         <outlet property="imageView" destination="f2m-po-4Fc" id="ADD-zl-1HH"/>

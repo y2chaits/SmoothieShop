@@ -11,12 +11,6 @@
 
 @interface ViewController : UIViewController <WPCardReaderDelegate, WPTokenizationDelegate>
 
-@property (nonatomic, weak) IBOutlet UIView *containerView;
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
-
-@property (nonatomic, weak) IBOutlet UILabel *statusLabel;
-@property (nonatomic, weak) IBOutlet UIButton *buyButton;
-
 
 @end
 

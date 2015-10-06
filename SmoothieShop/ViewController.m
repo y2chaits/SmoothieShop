@@ -19,6 +19,14 @@
 
 @property (nonatomic, assign) double amount;
 
+@property (nonatomic, weak) IBOutlet UIView *containerView;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+
+@property (nonatomic, weak) IBOutlet UILabel *statusLabel;
+@property (nonatomic, weak) IBOutlet UIButton *buyButton;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *amountSelector;
+
+
 @end
 
 static NSString * const WEPAY_API_VERSION = @"2015-09-09";
@@ -45,7 +53,7 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
 
     // always keep swiper on
     config.restartCardReaderAfterGeneralError = YES;
-    config.restartCardReaderAfterOtherErrors = YES;
+    config.restartCardReaderAfterOtherErrors = NO;
     config.restartCardReaderAfterSuccess = NO;
 
     // Initialize WePay
@@ -105,6 +113,7 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
     self.statusLabel.layer.cornerRadius = 8;
 
     [self showStatus:@"Ready"];
+    [self enableBuyButton:YES];
 }
 
 - (void) showStatus:(NSString *)message
@@ -112,10 +121,48 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
     self.statusLabel.text = message;
 }
 
+-(IBAction) segmentedControlIndexChanged{
+    switch (self.amountSelector.selectedSegmentIndex) {
+        case 0:
+            self.amount = 5;
+            [self enableBuyButton:YES];
+            break;
+        case 1:
+            self.amount = 10;
+            [self enableBuyButton:YES];
+            break;
+        case 2:
+            self.amount = 15;
+            [self enableBuyButton:YES];
+            break;
+        case 3:
+            self.amount = 20;
+            [self enableBuyButton:YES];
+            break;
+
+        default:
+            self.amount = 0;
+            [self enableBuyButton:NO];
+            break;
+    }
+}
+
+- (void) enableBuyButton:(BOOL)shouldEnable
+{
+    self.buyButton.enabled = shouldEnable;
+}
+
+- (void) enableAmountSelector:(BOOL)shouldEnable
+{
+    self.amountSelector.enabled = shouldEnable;
+}
+
+
 - (IBAction) buyButtonPressed:(id)sender
 {
-    //TODO: amount prompt
-    self.amount = 5.00;
+    // disable selector and buy button
+    [self enableAmountSelector:NO];
+    [self enableBuyButton:NO];
 
     // Change status label
     [self showStatus:@"Please wait..."];
@@ -137,7 +184,6 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
                                 ];
 
     [str appendAttributedString:info];
-//    [self consoleLog:str];
 
     // Change status label
     [self showStatus:@"Got payment info"];
@@ -147,6 +193,14 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
 {
     NSString *str = [NSString stringWithFormat:@"error: %@", [error localizedDescription]];
     [self showStatus:str];
+
+    if (error.code == -10016 || error.code == 10016) {
+        // do nothing, will restart
+    } else {
+        // wont restart, so enable buttons
+        [self enableAmountSelector:YES];
+        [self enableBuyButton:YES];
+    }
 }
 
 - (void) cardReaderDidChangeStatus:(id)status
@@ -171,7 +225,8 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
     } else if (status == kWPCardReaderStatusTokenizing) {
         [self showStatus:@"Tokenizing..."];
     } else if (status == kWPCardReaderStatusStopped) {
-        [self showStatus:@"Card Reader Stopped"];
+        // dont show this message
+        //[self showStatus:@"Card Reader Stopped"];
     } else {
         [self showStatus:[status description]];
     }
@@ -182,17 +237,7 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
 - (void) paymentInfo:(WPPaymentInfo *)paymentInfo
          didTokenize:(WPPaymentToken *)paymentToken
 {
-    [self showStatus:@"Tokenized, checking out..."];
-
-    // Print message to console
-    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"paymentInfo:didTokenize: \n"];
-    NSAttributedString *info = [[NSAttributedString alloc] initWithString:[paymentToken description]
-                                                               attributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:0 green:0 blue:1 alpha:1]}
-                                ];
-
-    [str appendAttributedString:info];
-
-//    [self consoleLog:str];
+    [self showStatus:[NSString stringWithFormat:@"Tokenized, charging $%d", (int)self.amount]];
 
     [self checkoutWithToken:paymentToken];
 }
@@ -202,6 +247,9 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
 {
     NSString *str = [NSString stringWithFormat:@"error: %@", [error localizedDescription]];
     [self showStatus:str];
+
+    [self enableAmountSelector:YES];
+    [self enableBuyButton:YES];
 }
 
 - (void) checkoutWithToken:(WPPaymentToken *)paymentToken
@@ -209,10 +257,14 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
     [self checkoutCreate:[self createCheckoutRequestParamsForToken:paymentToken]
             successBlock:^(NSDictionary * returnData) {
                 [self showStatus:@"Checkout completed!"];
+                [self enableAmountSelector:YES];
+                [self enableBuyButton:YES];
             }
             errorHandler:^(NSError * error) {
                 NSString *str = [NSString stringWithFormat:@"error: %@", [error localizedDescription]];
                 [self showStatus:str];
+                [self enableAmountSelector:YES];
+                [self enableBuyButton:YES];
             }
      ];
 }
