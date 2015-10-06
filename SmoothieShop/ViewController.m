@@ -114,6 +114,7 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
 
     [self showStatus:@"Ready"];
     [self enableBuyButton:YES];
+    self.amount = 5;
 }
 
 - (void) showStatus:(NSString *)message
@@ -271,17 +272,23 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
 
 - (NSDictionary *) createCheckoutRequestParamsForToken:(WPPaymentToken *)paymentToken
 {
-    NSMutableDictionary *requestParams = [@{
-                                            @"account_id":self.accountId,
-                                            @"short_description":@"Smoothie Shop",
-                                            @"type":@"goods",
-                                            @"amount":@(self.amount),
-                                            @"currency":@"USD",
-                                            @"payment_method_type":@"credit_card",
-                                            @"payment_method_id": paymentToken.tokenId
-                                            } mutableCopy];
+    NSDictionary *requestParams = @{
+                                    @"account_id":self.accountId,
+                                    @"short_description":@"Smoothie Shop",
+                                    @"type":@"goods",
+                                    @"amount":@(self.amount),
+                                    @"currency":@"USD",
+                                    @"payment_method": @{
+                                            @"type":@"credit_card",
+                                            @"credit_card": @{
+                                                    @"id": paymentToken.tokenId
+                                                    }
+                                            }
+                                    };
 
     return requestParams;
+
+
 }
 
 
@@ -334,13 +341,13 @@ static NSString * const WEPAY_API_VERSION = @"2015-09-09";
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"charset" forHTTPHeaderField:@"utf-8"];
-    [request setValue:@"Api-Version" forHTTPHeaderField:WEPAY_API_VERSION];
+    [request setValue:WEPAY_API_VERSION forHTTPHeaderField:@"Api-Version"];
 
     [request setValue: [NSString stringWithFormat: @"Smoothie Shop iOS"] forHTTPHeaderField:@"User-Agent"];
 
     // Set access token
     if(accessToken != nil) {
-        [request setValue: [NSString stringWithFormat: @"Bearer: %@", accessToken] forHTTPHeaderField:@"Authorization"];
+        [request setValue: [NSString stringWithFormat: @"Bearer %@", accessToken] forHTTPHeaderField:@"Authorization"];
     }
 
     NSError *parseError = nil;
